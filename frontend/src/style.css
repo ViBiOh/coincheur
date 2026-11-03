@@ -1,0 +1,180 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+}
+
+.title {
+  margin: 16px;
+  font-size: 1.4rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 16px 16px;
+}
+
+h2,
+h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+h3 {
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+button {
+  font: inherit;
+  padding: 10px 14px;
+  border: 2px solid #8886;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+button.primary {
+  font-weight: 600;
+}
+
+.actions {
+  margin-top: 8px;
+}
+
+.error-actions {
+  margin-top: 32px;
+}
+
+button.danger {
+  border-color: #c62828;
+  color: #c62828;
+}
+
+button.danger:hover:not(:disabled) {
+  background: #c6282822;
+}
+
+button.warn {
+  border-color: #ef6c00;
+  color: #ef6c00;
+}
+
+button.warn:hover:not(:disabled) {
+  background: #ef6c0022;
+}
+
+button.active {
+  border-color: #2a7;
+  background: #2a73;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.red {
+  color: #d33;
+}
+
+.video-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000;
+}
+
+.video-frame img,
+.video-frame canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+.video-frame.live img,
+.video-frame.live canvas {
+  visibility: visible;
+}
+
+.status {
+  min-height: 1.4em;
+  margin: 8px 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.suit-row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.suit-row button {
+  padding: 8px 0;
+  font-weight: 600;
+}
+
+.side-panel,
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.scores {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  text-align: center;
+}
+
+.score {
+  padding: 12px;
+  border-radius: 8px;
+  background: #8882;
+}
+
+.score strong {
+  display: block;
+  font-size: 2.4rem;
+}
+
+.warning {
+  margin: 0 0 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 2px solid #c62828;
+  background: #c6282826;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
